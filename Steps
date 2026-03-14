@@ -1,0 +1,14 @@
+Steps
+
+1) Define the Problem: classification
+2) Collect Data (import csv)
+3) Preprocess data
+  - Data cleaning (remove duplicates, handle missing values)
+  - Transform if needed
+  - Split dataset into Training Set (80%) and Testing Set(20%)
+4) Choose a model (algorithm)
+5) Train the model
+6) Evaluate the model (Evaluation Metrics)
+7) Optional: Tune Hyperparameters
+8) Validate the model
+9) Optional: Make predictions (test more unseen data)
