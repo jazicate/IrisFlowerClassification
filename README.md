@@ -1,17 +1,13 @@
 # Iris Flower Classification
-
 This project trains and compares three classifiers on the classic Iris dataset:
-
 - Gaussian Naive Bayes
 - `SGDClassifier` with `log_loss` as a linear logistic model
 - `MLPClassifier` as a small feed-forward neural network
 
 The script handles basic dataset inspection, label encoding, train/test splitting, feature scaling for the linear model, metric reporting, and plot generation.
 
-## What the project does
-
+## What the project doe
 `main.py` runs a full end-to-end classification workflow:
-
 1. Loads `iris/iris.data`
 2. Assigns column names to the four flower measurements plus class label
 3. Checks shape, sample rows, duplicates, and missing values
@@ -21,7 +17,6 @@ The script handles basic dataset inspection, label encoding, train/test splittin
 7. Trains the three models
 8. Evaluates each model on both training and test data
 9. Prints a comparison table with:
-
 - Accuracy
 - Error
 - Sensitivity
@@ -40,7 +35,6 @@ It also saves visual output under `Data Visualization/`, including:
 It also produces a saved model-comparison output image at `iris-comparison-models.png`.
 
 ## Project layout
-
 `main.py` contains the full training and evaluation pipeline.
 
 `iris/` contains the local copy of the Iris dataset and metadata.
@@ -50,7 +44,6 @@ It also produces a saved model-comparison output image at `iris-comparison-model
 `Steps` is a short outline of the machine learning workflow used in the project.
 
 ## Requirements
-
 This project uses Python 3.10 and a local virtual environment in `.venv`.
 
 Create the environment:
@@ -72,7 +65,6 @@ pip install -r requirements.txt
 ```
 
 ## How to run
-
 From the project root:
 
 ```bash
@@ -83,9 +75,26 @@ python3 main.py
 The script prints the original dataset, preprocessing checks, per-model evaluation output, and a final comparison table in the terminal.
 
 ## Results
+Measured results from a fresh run on the local Iris dataset with `random_state=42` and an 80/20 train-test split:
 
-Console log of Model Comparison result:
-<img src="iris-comparison-models.png" alt="Model comparison results" width="900" />
+| Metric | Naive Bayes (Train) | Naive Bayes (Test) | Logistic Regression (Train) | Logistic Regression (Test) | Neural Network (Train) | Neural Network (Test) |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Accuracy | 0.9500 | 1.0000 | 0.9583 | 1.0000 | 0.9833 | 1.0000 |
+| Error | 0.0500 | 0.0000 | 0.0417 | 0.0000 | 0.0167 | 0.0000 |
+| Sensitivity | 0.9500 | 1.0000 | 0.9581 | 1.0000 | 0.9837 | 1.0000 |
+| Specificity | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| Precision | 0.9500 | 1.0000 | 0.9586 | 1.0000 | 0.9837 | 1.0000 |
+| F1 score | 0.9500 | 1.0000 | 0.9583 | 1.0000 | 0.9833 | 1.0000 |
+| Log-loss | 0.1296 | 0.0263 | 0.1908 | 0.1754 | 0.0621 | 0.0697 |
+| ROC AUC | 0.9935 | 1.0000 | 0.9957 | 1.0000 | 0.9985 | 1.0000 |
+
+Best hyperparameters selected for the SGD-based logistic model:
+
+- `alpha=0.001`
+- `eta0=0.01`
+- `learning_rate='optimal'`
+- `max_iter=1000`
+- Mean cross-validation accuracy: `0.9417`
 
 Generated visualization charts:
 ### Preprocessed Dataset Pairplot
