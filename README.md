@@ -37,6 +37,8 @@ It also saves visual output under `Data Visualization/`, including:
 - A confusion matrix for the training set
 - A confusion matrix for the test set
 
+It also produces a saved model-comparison output image at `iris-comparison-models.png`.
+
 ## Project layout
 
 `main.py` contains the full training and evaluation pipeline.
@@ -79,6 +81,24 @@ python3 main.py
 ```
 
 The script prints the original dataset, preprocessing checks, per-model evaluation output, and a final comparison table in the terminal.
+
+## Results
+
+Console log of Model Comparison result:
+<img src="iris-comparison-models.png" alt="Model comparison results" width="900" />
+
+Generated visualization charts:
+### Preprocessed Dataset Pairplot
+
+<img src="Data%20Visualization/Visualization%20of%20Preprocessed%20Dataset.png" alt="Preprocessed dataset pairplot" width="700" />
+
+### Training Set Confusion Matrix
+
+<img src="Data%20Visualization/Confusion%20Matrix%20for%20Iris%20Dataset%20Training%20Set.png" alt="Training set confusion matrix" width="520" />
+
+### Test Set Confusion Matrix
+
+<img src="Data%20Visualization/Confusion%20Matrix%20for%20Iris%20Dataset%20Test%20Set.png" alt="Test set confusion matrix" width="520" />
 
 ## Dataset
 
