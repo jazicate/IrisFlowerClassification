@@ -6,7 +6,7 @@ This project trains and compares three classifiers on the classic Iris dataset:
 
 The script handles basic dataset inspection, label encoding, train/test splitting, feature scaling for the linear model, metric reporting, and plot generation.
 
-## What the project doe
+## What the project does
 `main.py` runs a full end-to-end classification workflow:
 1. Loads `iris/iris.data`
 2. Assigns column names to the four flower measurements plus class label
@@ -42,6 +42,25 @@ It also produces a saved model-comparison output image at `iris-comparison-model
 `Data Visualization/` contains generated plots from previous runs.
 
 `Steps` is a short outline of the machine learning workflow used in the project.
+
+## Dataset
+
+Citation:
+
+Fisher, R. (1936). *Iris* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76
+
+The dataset used in this project is from the UCI Machine Learning Repository, specifically the Iris Data Set. This dataset contains measurements of iris flowers, including sepal length, sepal width, petal length, and petal width. The target variable indicates the flower species, which is classified into one of three categories:
+
+- Iris-setosa
+- Iris-versicolor
+- Iris-virginica
+
+Each sample includes four numeric features:
+
+- Sepal length
+- Sepal width
+- Petal length
+- Petal width
 
 ## Requirements
 This project uses Python 3.10 and a local virtual environment in `.venv`.
@@ -108,21 +127,6 @@ Generated visualization charts:
 ### Test Set Confusion Matrix
 
 <img src="Data%20Visualization/Confusion%20Matrix%20for%20Iris%20Dataset%20Test%20Set.png" alt="Test set confusion matrix" width="520" />
-
-## Dataset
-
-This repo uses the local Iris dataset stored in [`iris/iris.data`](/Users/jeromeazicate/Desktop/IrisFlowerClassification/iris/iris.data). The accompanying metadata in [`iris/iris.names`](/Users/jeromeazicate/Desktop/IrisFlowerClassification/iris/iris.names) describes 150 samples across three species:
-
-- Iris-setosa
-- Iris-versicolor
-- Iris-virginica
-
-Each sample includes four numeric features:
-
-- Sepal length
-- Sepal width
-- Petal length
-- Petal width
 
 ## Notes
 
